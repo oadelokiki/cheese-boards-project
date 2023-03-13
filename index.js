@@ -5,8 +5,12 @@ const {Cheese} = require("./Cheese")
 User.hasMany(Board)
 Board.belongsTo(User)
 
-Cheese.belongsTo(Board)
+
 Board.hasMany(Cheese)
+
+Cheese.hasMany(Board)
+
+
 
 module.exports = {
 	User,
